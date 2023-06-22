@@ -1,0 +1,51 @@
+
+ <div class="page-wrapper">
+    <div class="content container-fluid">
+ 
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Add Marks</h3>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Exam</li>
+                    </ul> -->
+                </div>
+                <!-- <div class="col-auto text-right float-right ml-auto">
+                    <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
+                    <a href="add-exam.html" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                </div> -->
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <form method="post" onsubmit="return sendData('./marks.php','Insert');">
+                            <table id="addMarksSub" class="table table-hover table-center mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>SL.NO</th>
+                                        <th>RegNo</th>
+                                        <th>Student<br>Name</th>
+                                        <th id="subName"></th>                                      
+                                     </tr>
+                                  </thead>
+                                  <tbody id="marksBody">
+ 
+                                  </tbody>
+                                </table>
+                                <div id="output"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    
+ 
+ </div>

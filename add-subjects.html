@@ -1,0 +1,75 @@
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Add Subject</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">Subjects</li>
+                        <li class="breadcrumb-item active">Add Subject</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" onsubmit="return sendData('./subjects.php');">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title"><span>Subject Information</span></h5>
+                                </div>
+                                <!-- <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                       <label>Class</label>
+                                       <select class="form-control" name="className">
+                                           <option></option> 
+                                          <option>Female</option>
+                                          <option>Male</option>
+                                          <option>Others</option>
+                                       </select>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                       <label>Stream</label>
+                                       <select class="form-control" name="stream">
+                                          <option>Select Gender</option>
+                                          <option>Female</option>
+                                          <option>Male</option>
+                                          <option>Others</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 -->
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Subject Code</label>
+                                        <input type="text" class="form-control" name="subCode"  maxlength=5 required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Subject Name</label>
+                                        <input type="text" class="form-control" name="subName" required>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="hiddenValue" value="1" class="form-control">
+                                <div class="col-12">
+                                    <button type="submit" name="addSub" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                            <div id="output"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

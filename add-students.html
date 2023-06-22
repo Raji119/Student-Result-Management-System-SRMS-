@@ -1,0 +1,96 @@
+<div class="page-wrapper">
+    <div class="content container-fluid">
+       <div class="page-header">
+          <div class="row align-items-center">
+             <div class="col">
+                <h3 class="page-title">Add Students</h3>
+                <ul class="breadcrumb">
+                   <li class="breadcrumb-item">Students</li>
+                   <li class="breadcrumb-item active">Add Students</li>
+                </ul>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="col-sm-12">
+             <div class="card">
+                <div class="card-body">
+                   <form method="post" id="form" name="form" onsubmit="return sendData('./students.php');">
+                      <div class="row">
+                         <div class="col-12">
+                            <h5 class="form-title"><span>Student Information</span></h5>
+                         </div>
+                         <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                               <label>Student Name</label>
+                               <input type="text" class="form-control" name="stuName" required>
+                            </div>
+                         </div>
+                         <!-- <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                               <label>Last Name</label>
+                               <input type="text" class="form-control">
+                            </div>
+                         </div> -->
+                         <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                               <label>Student Id</label>
+                               <input type="text" class="form-control" name="regNo" required>
+                            </div>
+                         </div>
+                         <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                               <label>Gender</label>
+                               <select class="form-control" name="gender" required>
+                                  <option selected disabled value="">Select Gender</option>
+                                  <option value="Male">Male</option>
+                                  <option value="Female">Female</option>
+                                  <option value="Others">Others</option>
+                               </select>
+                            </div>
+                         </div>
+                         <div class="col-12 col-sm-6">
+                           <div class="form-group">
+                              <label>Class</label>
+                              <select class="form-control" name="classID" id="getClass"  onfocus="callFunction('./classes.php','getClass','2');" required>
+                                  <option selected disabled value="">Select Class</option>
+                              </select>
+                           </div>
+                        </div>
+                         <!-- <div class="col-12 col-sm-6">
+                           <div class="form-group">
+                              <label>Date of Birth</label>
+                              <input type="date" class="form-control" name="dob" required>
+                           </div>
+                        </div> -->
+
+                         
+                        
+                         <div class="col-12">
+                            <h5 class="form-title"><span>Parent Information</span></h5>
+                         </div>
+                         <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                               <label>Father's Name</label>
+                               <input type="text" class="form-control" name="fName" required>
+                            </div>
+                         </div>
+                         <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                               <label>Mother's Name</label>
+                               <input type="text" class="form-control" name="mName" required>
+                            </div>
+                         </div>
+                         <input type="hidden" class="form-control" name="hiddenValue" value="1"> 
+                         <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                         </div>
+                         <div id="output"></div>
+                      </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

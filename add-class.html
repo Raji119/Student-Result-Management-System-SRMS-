@@ -1,0 +1,55 @@
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Add Class</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">Class</li>
+                        <li class="breadcrumb-item active">Add Class</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" id="form" name="form" onsubmit="return sendData('./classes.php');">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title"><span>Class Information</span></h5>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Class</label>
+                                        <input type="text" class="form-control" name="className" id="className" required>
+                                    </div>
+                                </div>
+                                 
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Section</label>
+                                        <input type="text" class="form-control" name="section" id="section" required>
+                                    </div>
+                                </div>
+                               
+                                <input type="hidden" class="form-control" name="hiddenValue" value="1" id="hiddenValue"> 
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary" name="insertClass"
+                                        id="submit">Submit</button>
+                                </div>
+                                <div id="output"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./Navigation.js"></script>
+<script src="./assets/plugins/datatables/dataTables.min.js"></script>
+<script src="./assets/plugins/datatables/jquery.dataTables.min.js"></script>

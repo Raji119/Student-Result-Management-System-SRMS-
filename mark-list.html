@@ -1,0 +1,69 @@
+
+ <div class="page-wrapper">
+    <div class="content container-fluid">
+ 
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Marks List</h3>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item"></li>
+                        <li class="breadcrumb-item active">Exam</li>
+                    </ul> -->
+                </div>
+                <!-- <div class="col-auto text-right float-right ml-auto">
+                    <a href="#" class="btn btn-outline-primary mr-2" onclick="printF()"><i class="fas fa-download"></i> Download</a> -->
+                    <!-- <a href="add-exam.html" class="btn btn-primary"><i class="fas fa-plus"></i></a> -->
+                <!-- </div> -->
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div id="output"></div>
+                        <div class="table-responsive">
+                            <table id="marksList" class="table table-hover table-center mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>SL.NO</th>
+                                        <th>ID</th>
+                                        <th>Student Name</th>
+                                        <th id=subHead></th>
+                                        <th>Total</th>
+                                        <th>Percentage</th>
+                                        <th>Grade</th>
+                                        <th>Result</th>
+                                        <th>View</th>
+                                     </tr>
+                                  </thead>
+                                  <tbody>
+ 
+                                  </tbody>
+                                  <tfoot>
+                                    <tr>
+                                        <th>SL.NO</th>
+                                        <th>ID</th>
+                                        <th>Student Name</th>
+                                        <th id=subFoot></th>
+                                        <th>Total</th>
+                                        <th>Percentage</th>
+                                        <th>Grade</th>
+                                        <th>Result</th>
+                                        <th>View</th>
+                                    </tr>
+                                </tfoot>
+ 
+ 
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" onclick='loadHTML("class-exams.html","classExams.php","classExamsMarks","5")'>Back</button>
+       </div>
+    </div>
+ </div>

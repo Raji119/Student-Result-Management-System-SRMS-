@@ -1,0 +1,90 @@
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Add Exams Classwise</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">Exams</li>
+                        <li class="breadcrumb-item active">Add Exams Classwise</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" onsubmit="return sendData('./classExams.php');">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title"><span>Exam Information</span></h5>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Exam</label>
+                                        <select class="form-control" name="examID" id="getExams"
+                                            onfocus="callFunction('./exams.php','getExams','2');" required>
+                                            <option disabled selected value="">Select Exam</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label> Start Date of Exam</label>
+                                        <input type="date" class="form-control" id=startDate name="examStartDate" onfocus="dateCheck();" max="" min="0"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>End Date of Exam</label>
+                                        <input type="date" class="form-control" id=endDate name="examEndDate" onfocus="dateCheck();" min="0" max="30" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Class</label>
+                                        <select class="form-control" name="classID" id="getClass"
+                                            onchange="changeFunction('./classSubInfo.php','getSubByClass','5');"
+                                            onfocus="callFunction('./classes.php','getClass','2');" required>
+                                            <option disabled selected value="">Select Class</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="showSub" class="row"></div>
+                                <input type="hidden" name="hiddenValue" value="1" class="form-control">
+                                <div class="col-12" style="display:none ;" id="submitAddExam">
+                                    <button type="submit" name="addSub" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                            <div id="output"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- <script>
+    $('#startDate').datepicker({
+      onSelect: function(dateText, inst){
+         alert("HII");
+          $('#endDate').datepicker('option', 'minDate', new Date(dateText));
+      },
+  });
+  
+  $('#endDate').datepicker({
+      onSelect: function(dateText, inst){
+          $('#startDate').datepicker('option', 'maxDate', new Date(dateText));
+      }
+  });
+</script> -->
